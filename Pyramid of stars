@@ -1,0 +1,27 @@
+#!/bin/bash
+
+###################2018-02-17 11:25 #########################
+
+read -p "Enter the number of rows you want pyramid for  : " n
+
+  for((i=1;i<=n;i++))
+  do
+
+        for ((k=i;k<=n;k++))
+           do
+                echo -ne " "
+           done
+
+        for ((j=1;j<=i;j++))
+          do
+                printf "*"
+          done
+
+        for ((l=1;l<=i;l++))
+          do
+                printf "*"
+          done
+
+    echo " "
+
+done
