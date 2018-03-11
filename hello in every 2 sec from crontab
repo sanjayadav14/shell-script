@@ -1,0 +1,19 @@
+
+####### Printing hello after every 2 sec##################
+
+#!/bin/bash
+
+for i in {1..30}
+do
+        echo "Hello"
+        date
+        sleep 2
+
+done
+
+
+
+crontab entry ===>
+
+[root@CENTOS_1 tmp]# crontab -e
+* * * * * sh /root/2_sec_hello.sh >> /tmp/hello.txt
