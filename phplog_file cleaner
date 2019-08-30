@@ -1,0 +1,18 @@
+#############  This file truncates file named php.log-{date}   ##############
+
+
+#!/usr/bin/bash
+
+
+datevar=$(date '+%y%m%d')
+echo $datevar
+
+abc=php.log-20
+
+phpfile="$(echo "$abc$datevar")"
+
+cd /var/log/
+
+truncate -s 0 $phpfile
+
+echo "Cleanup completed!!"
