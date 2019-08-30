@@ -1,0 +1,17 @@
+###### Iterating in comma seperated csv file  ######
+
+
+
+#!/bin/bash
+
+
+INPUTFILE="testcsv.csv"
+
+FIELD=1
+
+COUNT=`sed 's/[^,]//g' $INPUTFILE | wc -c`; let "COUNT+=1"
+
+while [ "$FIELD" -lt "$COUNT" ]; do
+        cat $INPUTFILE | cut -d, -f$FIELD
+        let "FIELD+=1"
+done
