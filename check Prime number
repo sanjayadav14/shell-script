@@ -1,0 +1,30 @@
+#####   Checking Prime number   #######
+
+
+
+#!/bin/bash
+
+read -p "Enter number to check" num
+
+i=2
+no=1
+
+if [[ ! $num =~ [0-9] ]] ## check input is integer or not ##
+then
+        echo "Invalide argument, please enter porper number"
+        exit 1
+elif [[ $num -le 0 ]] ## check input is less than zero or not ##
+then
+        echo "Invalide Input"
+        exit 1
+fi
+while [ $i -le `expr $num / 2` -a $no -ne 0 ];
+ do
+        no=`expr $num % $i`
+        i=`expr $i + 1`
+ done
+if [ $no -ne 0 ] ## check output is not equals to zero ##
+then
+        echo "$num is prime"
+else
+        echo "$num is not 
