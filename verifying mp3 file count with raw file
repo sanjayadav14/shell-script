@@ -1,0 +1,19 @@
+##### Verifying mp3 count with raw file count for maintance purpose   #######
+
+
+
+#!/bin/bash
+
+read -p "Please enter date for which you want to verify count of recordings :   "  date_value
+
+#echo "$date_value"
+
+
+mp3_count=`find  /dacx/10.2.1.70_backup_mp3/$date_value -iname '*.mp3*'| wc -l`
+
+echo "mp3 count is  :-  $mp3_count"
+
+
+raw_files=`find /dacx/10.2.1.70_backup/$date_value -iname '*in.talaw*'| wc -l`
+
+echo "Raw files count is  :-  $raw_files"
