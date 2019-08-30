@@ -1,7 +1,7 @@
 #### This script checks user is present on system or not  ##########
 
 
-#!/bi/bash
+#!/bin/bash
 
 read -p "Enter user name to check for existance :  " username
 
